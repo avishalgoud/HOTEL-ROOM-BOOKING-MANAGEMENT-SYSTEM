@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Lucky Grand Hotel</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="navbar">🏨 Lucky Grand Hotel</div>
+
+<div class="hero">
+<h1>Welcome To Lucky Grand Hotel</h1>
+<p>Book Your Dream Stay</p>
+</div>
+
+<div class="slider">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" class="active">
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+</div>
+
+<h2 style="text-align:center">Our Rooms</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+
+</div>
+
+<div class="container">
+<h2>Food Timings 🍽</h2>
+<p><b>Tiffin:</b> 7 AM - 10 AM</p>
+<p><b>Lunch:</b> 12 PM - 3 PM</p>
+<p><b>Dinner:</b> 7 PM - 10:30 PM</p>
+</div>
+
+
+<!-- LOGIN -->
+
+<div class="container" id="login">
+
+<h2>Login</h2>
+
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+<button onclick="signup()">Signup</button>
+
+<p id="loginMsg"></p>
+
+</div>
+
+
+<!-- BOOKING -->
+
+<div class="container" id="booking" style="display:none">
+
+<h2>Room Booking</h2>
+
+<p id="availability"></p>
+
+<input id="name" placeholder="Customer Name">
+
+<input type="date" id="checkin">
+<input type="date" id="checkout">
+
+<select id="room">
+<option value="">Select Room</option>
+<option value="single">Single ₹1000</option>
+<option value="double">Double ₹2000</option>
+<option value="family">Family ₹3500</option>
+</select>
+
+<button onclick="showFood()">Continue</button>
+
+</div>
+
+
+<!-- FOOD ORDER -->
+
+<div class="container" id="foodOrder" style="display:none">
+
+<h2>Food Order 🍔</h2>
+
+<select id="foodItem">
+
+<option value="">Select Food</option>
+
+<option value="Idli">Idli ₹50</option>
+<option value="Dosa">Dosa ₹80</option>
+<option value="Pongal">Pongal ₹70</option>
+<option value="Upma">Upma ₹60</option>
+<option value="Vada">Vada ₹50</option>
+<option value="Tea">Tea ₹20</option>
+<option value="Coffee">Coffee ₹25</option>
+
+<option value="Veg Meals">Veg Meals ₹120</option>
+<option value="Chicken Biryani">Chicken Biryani ₹180</option>
+<option value="Veg Biryani">Veg Biryani ₹150</option>
+<option value="Fried Rice">Fried Rice ₹130</option>
+<option value="Curd Rice">Curd Rice ₹90</option>
+
+<option value="Chapati">Chapati ₹60</option>
+<option value="Paneer Curry">Paneer Curry ₹160</option>
+<option value="Chicken Curry">Chicken Curry ₹200</option>
+<option value="Noodles">Noodles ₹100</option>
+<option value="Soup">Soup ₹90</option>
+
+</select>
+
+<input type="number" id="qty" placeholder="Quantity">
+
+<button onclick="addFood()">Add Food</button>
+
+<div id="foodList"></div>
+
+<button onclick="showPayment()">Proceed Payment</button>
+
+</div>
+
+
+<!-- PAYMENT -->
+
+<div class="container" id="paymentPage" style="display:none">
+
+<h2>Payment</h2>
+
+<input placeholder="Card Number">
+<input placeholder="Card Holder Name">
+<input placeholder="CVV">
+
+<button onclick="completeBooking()">Pay</button>
+
+</div>
+
+
+<!-- BILL -->
+
+<div class="container" id="billPage" style="display:none">
+
+<h2>Final Bill</h2>
+
+<div id="bill"></div>
+
+<button onclick="downloadPDF()">Download PDF</button>
+
+</div>
+
+
+<!-- REVIEWS -->
+
+<div class="container">
+
+<h2>Customer Reviews ⭐</h2>
+
+<input id="reviewName" placeholder="Your Name">
+<textarea id="reviewText"></textarea>
+
+<button onclick="addReview()">Submit</button>
+
+<div id="reviews"></div>
+
+</div>
+
+
+<!-- ADMIN DASHBOARD -->
+
+<div class="container">
+
+<h2>Admin Dashboard 📊</h2>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

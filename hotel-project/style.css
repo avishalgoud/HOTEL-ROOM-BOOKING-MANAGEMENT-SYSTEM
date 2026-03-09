@@ -1,0 +1,95 @@
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+.navbar{
+background:#111;
+color:white;
+padding:15px;
+text-align:center;
+font-size:24px;
+}
+
+.hero{
+height:80vh;
+background:url("https://images.unsplash.com/photo-1566073771259-6a8506099945") center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-shadow:2px 2px 5px black;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.container{
+max-width:650px;
+margin:30px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+text-align:center;
+}
+
+input,select{
+width:90%;
+padding:10px;
+margin:8px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px 20px;
+background:#007bff;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.slider img{
+width:100%;
+height:350px;
+object-fit:cover;
+display:none;
+}
+
+.slider img.active{
+display:block;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.foodItem{
+background:#fff3cd;
+padding:8px;
+margin:5px;
+border-radius:5px;
+}
+
+.reviewBox{
+background:#f9f9f9;
+padding:10px;
+margin:10px;
+border-radius:5px;
+box-shadow:0 0 5px gray;
+}
